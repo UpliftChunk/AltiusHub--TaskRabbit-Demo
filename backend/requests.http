@@ -1,0 +1,34 @@
+###
+POST http://localhost:5000/register
+Content-Type: application/json
+
+{
+   "name": "user",
+   "email": "user",
+   "password": "user"
+}
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+   "user":{
+      "name": "user",
+      "email": "user",
+      "password": "user"
+   }
+}
+###
+POST http://localhost:5000/update
+Content-Type: application/json
+
+{
+   "new_user_details":{
+      "name": "useradfdsf",
+      "email": "user",
+      "password": "user"
+   },
+   "name": "user"
+}
+###
+###

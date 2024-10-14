@@ -12,11 +12,13 @@ dotenv.config({path: "./config/.env"});
 const connectDatabase = require('./config/connectDatabase.js');
 connectDatabase();
 
+app.use(express.json())
+
 // set routes
 const userDataRouter = require('./routes/userDataRouter.js');
 // const taskDataRouter = require('./routes/taskDataRouter.js');
 
-// app.use(userDataRouter);
+app.use(userDataRouter);
 // app.use(taskDataRouter);
 
 const MACHINE = process.env.MACHINE || "localhost";
