@@ -9,13 +9,15 @@ app.use(cors());
 const dotenv = require('dotenv');
 dotenv.config({path: "./config/.env"});
 
+const connectDatabase = require('./config/connectDatabase.js');
+connectDatabase();
 
 // set routes
 const userDataRouter = require('./routes/userDataRouter.js');
-const taskDataRouter = require('./routes/taskDataRouter.js');
+// const taskDataRouter = require('./routes/taskDataRouter.js');
 
-app.use(userDataRouter);
-app.use(taskDataRouter);
+// app.use(userDataRouter);
+// app.use(taskDataRouter);
 
 const MACHINE = process.env.MACHINE || "localhost";
 const PORT = process.env.PORT || 5000;
